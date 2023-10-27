@@ -1,6 +1,11 @@
 from django.shortcuts import render,  redirect
 from django.contrib.auth import login, authenticate
-from django.contrib.admin.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm
+
+
+# Crete the homepage
+def index(request):
+    return render(request, 'users/_base.html')
 
 # Crete the registration view
 def register(request):
